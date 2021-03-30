@@ -1,2 +1,8 @@
-# Module-3-Homework
-Tomas Pasiecznik | Homework: Module 3 (IS 421-002)
+###### Tomas Pasiecznik
+###### Professor Williams
+###### IS 421-002
+###### 30 March 2020
+
+# Homework: Module 3 - Introduction to API
+
+### Assignment: 
