@@ -7,10 +7,10 @@
 
 ### Assignment: Document your REST API using the Swagger Editor to generate API Documentation. Save the finished code into a YML file and submit it. You will need this later in the course. Also submit your Swagger Editor file.
 
-## School REST API Documentation  
+# School REST API Documentation  
 
 
-### User Management  
+## User Management  
 
 ```
 /user_management:
@@ -71,7 +71,7 @@
 - PUT: One User (Edit)
 - DELETE: One User (Delete)
 
-### Course Management  
+## Course Management  
 
 ```
   /course_management:
@@ -132,7 +132,7 @@
 - PUT: One Course (Edit)
 - DELETE: One Course (Delete)
 
-### Course Assignment Management  
+## Course Assignment Management  
 
 ```       
   /course_assignment_management:
@@ -193,7 +193,7 @@
 - PUT: One Assignment (Edit)
 - DELETE: One Assignment (Delete)
 
-### Course Section Management  
+## Course Section Management  
 
 ```
   /course_section_management/:
@@ -237,7 +237,7 @@
 - PUT: One Section (Edit)
 - DELETE: One Section (Delete)
 
-### Section Enrollment Management  
+## Section Enrollment Management  
 
 ```
 /section_enrollment_management/:
@@ -281,7 +281,7 @@
 - PUT: One Section (Edit)
 - DELETE: One Section (Delete)
 
-### Section Assignment Submission Management  
+## Section Assignment Submission Management  
 
 ```
 /section_assignment_submission_management:
