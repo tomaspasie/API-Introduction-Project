@@ -1,0 +1,428 @@
+swagger: '2.0'
+info:
+  description: 'Tomas Pasiecznik | Homework: Module 3 (IS 421-002)'
+  version: 1.0.0
+  title: School REST API
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: tp253@njit.edu
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: module-3-homework.swagger.io
+basePath: /v2
+tags:
+  - name: user_management
+    description: 'Purpose: The users that are members of the school.'
+  - name: course_management
+    description: 'Purpose: The courses students take e.g. title, description and content.'
+  - name: course_assignment_management
+    description: 'Purpose: Allowing assignments to be added to courses.'
+  - name: course_section_management
+    description: >-
+      Purpose: Allowing sections to be created to enroll teachers and students
+      in.
+  - name: section_enrollment_management
+    description: 'Purpose: Allowing students and teachers to be assigned to courses.'
+  - name: section_assignment_submission_management
+    description: 'Purpose: Allowing assignments to be submitted in a section and graded.'
+schemes:
+  - https
+  - http
+paths:
+  /user_management:
+    get:
+      tags:
+        - user_management
+      summary: Get Users
+      description: Browse All Users OR Retrieve One User
+      operationId: getUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: User
+          in: query
+          description: A member of the school.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid user
+  /user_management/:
+    put:
+      tags:
+        - user_management
+      summary: Edit User
+      description: Edit One User
+      operationId: putUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: User
+          in: query
+          description: A member of the school.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid user
+  /user_management/delete:
+    delete:
+      tags:
+        - user_management
+      summary: Delete User
+      description: Delete One User
+      operationId: deleteUser
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: User
+          in: query
+          description: A member of the school.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid user
+  /course_management:
+    get:
+      tags:
+        - course_management
+      summary: Get Courses
+      description: Browse All Courses OR Retrieve One Course
+      operationId: getCourse
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Course
+          in: query
+          description: A course a student takes.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid course
+  /course_management/:
+    put:
+      tags:
+        - course_management
+      summary: Edit Course
+      description: Edit One Course
+      operationId: putCourse
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Course
+          in: query
+          description: A course a student takes.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid course
+  /course_management/delete:
+    delete:
+      tags:
+        - course_management
+      summary: Delete Course
+      description: Delete One Course
+      operationId: deleteCourse
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Course
+          in: query
+          description: A course a student takes.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid course
+  /course_assignment_management:
+    get:
+      tags:
+        - course_assignment_management
+      summary: Get Assignments
+      description: Browse All Assignments OR Retrieve One Assignment
+      operationId: getAssignment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment to be added to courses.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment
+  /course_assignment_management/:
+    put:
+      tags:
+        - course_assignment_management
+      summary: Edit Assignment
+      description: Edit One Assignment
+      operationId: putAssignment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment to be added to courses.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment
+  /course_assignment_management/delete:
+    delete:
+      tags:
+        - course_assignment_management
+      summary: Delete Assignment
+      description: Delete One Assignment
+      operationId: deleteAssignment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment to be added to courses.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment
+  /course_section_management:
+    get:
+      tags:
+        - course_section_management
+      summary: Get Sections
+      description: Browse All Sections OR Retrieve One Section
+      operationId: getSection
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to enroll teachers and students in.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /course_section_management/:
+    put:
+      tags:
+        - course_section_management
+      summary: Edit Section
+      description: Edit One Section
+      operationId: putSection
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to enroll teachers and students in.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /course_section_management/delete:
+    delete:
+      tags:
+        - course_section_management
+      summary: Delete Section
+      description: Delete One Section
+      operationId: deleteSection
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to enroll teachers and students in.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /section_enrollment_management:
+    get:
+      tags:
+        - section_enrollment_management
+      summary: Get Sections
+      description: Browse All Sections OR Retrieve One Section
+      operationId: getSectionEnrollment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to assign teachers and students to.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /section_enrollment_management/:
+    put:
+      tags:
+        - section_enrollment_management
+      summary: Edit Section
+      description: Edit One Section
+      operationId: putSectionEnrollment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to assign teachers and students to.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /section_enrollment_management/delete:
+    delete:
+      tags:
+        - section_enrollment_management
+      summary: Delete Section
+      description: Delete One Section
+      operationId: deleteSectionEnrollment
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Section
+          in: query
+          description: A section to assign teachers and students to.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid section
+  /section_assignment_submission_management:
+    get:
+      tags:
+        - section_assignment_submission_management
+      summary: Get Assignment Submissions
+      description: Browse All Assignments OR Retrieve One Assignment
+      operationId: getAssignmentSubmission
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment submission.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment submission
+  /section_assignment_submission_management/:
+    put:
+      tags:
+        - section_assignment_submission_management
+      summary: Edit Assignment Submission
+      description: Edit One Assignment
+      operationId: putAssignmentSubmission
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment submission.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment submission
+  /section_assignment_submission_management/delete:
+    delete:
+      tags:
+        - section_assignment_submission_management
+      summary: Delete Assignment Submission
+      description: Delete One Assignment Submission
+      operationId: deleteAssignmentSubmission
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: Assignment
+          in: query
+          description: An assignment submission.
+          type: string
+          items:
+            type: string
+            default: available
+          collectionFormat: multi
+      responses:
+        '400':
+          description: Invalid assignment submission
