@@ -1,14 +1,8 @@
-###### Tomas Pasiecznik
-###### Professor Williams
-###### IS 421-002
-###### 30 March 2020
+# API Introduction Project
 
-# Homework: Module 3 - Introduction to API
-
-### Assignment: Document your REST API using the Swagger Editor to generate API Documentation. Save the finished code into a YML file and submit it. You will need this later in the course. Also submit your Swagger Editor file.
+### Goal: Document REST API using the Swagger Editor to generate API Documentation and the finished code into a YML file.
 
 # School REST API Documentation  
-
 
 ## User Management  
 
