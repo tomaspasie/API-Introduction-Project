@@ -2,9 +2,8 @@
 
 ### Goal: Document REST API using the Swagger Editor to generate API Documentation and the finished code into a YML file.
 
+## School REST API Documentation  
 By Tomas Pasiecznik:
-
-# School REST API Documentation  
 
 ## User Management  
 
